@@ -4,6 +4,9 @@ My name is Nick Iannone and I am a Junior Java Developer currently attending Tec
 
 *** This is my first repo and a few of my very first attempts at full-stack development. Any and all constructive feedback is welcome! ***
 
+Feel free to add me with a message on LinkedIn:
+https://www.linkedin.com/in/nickiannone/
+
 
 
 
