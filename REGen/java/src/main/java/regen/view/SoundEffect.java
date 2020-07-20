@@ -25,14 +25,18 @@ public class SoundEffect {
 			clip = AudioSystem.getClip();
 			clip.open(sound);
 		} catch (Exception e) {
-				e.printStackTrace();
+				
 		}
 	}
 	
 	public void play(String fileName) {
 		
-		String filePath = "/Users/niannone/Development/REGen/java/REGen Sounds/" + fileName + ".wav";
-		setFile(filePath);
-		clip.start();
+		try {
+			String filePath = "/Users/niannone/Development/Repo/REGen/java/REGen Sounds/" + fileName + ".wav";
+			setFile(filePath);
+			clip.start();
+		} catch (Exception e) {
+			
+		}
 	}
 }
