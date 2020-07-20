@@ -2,27 +2,6 @@ body {
     background-color: black;
 }
 
-.header {
-    text-align: center;
-    font-size: 3vw;
-    font-family: 'Germania One';
-    background-color: #2c2c2c;
-    background-image: url('./img/mouVTa.jpg');
-    color: azure;
-    border-radius: 10px;
-    padding-bottom: 10vw;
-    padding-top: 2vw;
-    margin-top: 50px;
-}
-
-h1 {
-    font-size: 170px;
-}
-
-h3 {
-    font-size: 20px;
-}
-
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -63,10 +42,6 @@ nav .nav-div:hover {
     cursor: pointer;
 }
 
-img {
-    resize: 1vw;
-}
-
 button {
     background-color: rgb(230, 198, 169);
     color: #000000;
@@ -83,6 +58,57 @@ button:hover {
     border-radius: 3px;
 }
 
+.header {
+    text-align: center;
+    font-size: 3vw;
+    font-family: 'Germania One';
+    background-color: #2c2c2c;
+    background-image: url('./img/mouVTa.jpg');
+    color: azure;
+    border-radius: 10px;
+    padding-bottom: 10vw;
+    padding-top: 2vw;
+    margin-top: 85px;
+}
+
+h1 {
+    font-size: 170px;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+#logo {
+    margin-top: 30px;
+}
+
 hr {
     border-top: 3px solid white;
+}
+
+#char_create {
+    background-image: url('./img/5yf75ev9gi6z.png');
+    font-family: 'Germania One';
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 10vw;
+    padding-top: 2vw;
+    font-size: 3vw;
+}
+
+#gen_random {
+    background-image: url('./img/samuel-couture-dnd-final.jpg');
+    font-family: 'Germania One';
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 10vw;
+    padding-top: 2vw;
+    font-size: 3vw;
 }
