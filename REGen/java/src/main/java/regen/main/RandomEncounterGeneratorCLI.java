@@ -24,7 +24,7 @@ public class RandomEncounterGeneratorCLI {
 	public static void main(String[] args) {
 		
 		BasicDataSource dataSource = new BasicDataSource();
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/encounter_generator_db");
+		dataSource.setUrl("jdbc:postgresql://localhost:5432/encounter_generator");
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("postgres1");
 
