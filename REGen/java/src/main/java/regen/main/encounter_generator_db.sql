@@ -12,6 +12,7 @@ CREATE TABLE race (
 
 race_id serial,
 name varchar(32),
+description varchar(500),
 modAC int,
 modHP int,
 modAttack int,
@@ -19,13 +20,13 @@ modSpell int
 
 );
 
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Goblin', 1, -10, 5, -2);
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Human', 1, 5, 3, 2);
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Elf', 0, 5, 3, 3);
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Dwarf', 2, 10, 2, 1);
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Halfling', 2, 10, 1, 2);
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Feyling', -2, 10, 0, 4);
-INSERT INTO race (name, modAC, modHP, modAttack, modSpell) VALUES ('Undead', -1, 20, 1, -1);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Goblin', 'These small but fierce creatures are skilled with melee weapons, able to get in close to their targets and land vicious strikes.', 1, -10, 5, -2);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Human', 'Well-rounded in a variety of combat situations, humans are adept with both weapons and spells in addition to above average resilience.', 1, 5, 3, 2);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Elf', 'Elves have a diverse skill set, similar to humans, sacrificing some resilience for more potent spells to protect their forested home.', 0, 5, 3, 3);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Dwarf', 'These hardy mountain-dwellers are as reilient as they come. Dwarves prefer the use of martial weapons, but are decent casters as well.', 2, 10, 2, 1);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Halfling', 'The small hill folk known as Halflings are evasive, durable targets. They are skilled with both weapons and magic.', 2, 5, 2, 2);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Feyling', 'The Feylings draw on the magical powers of their ancestral domain, the Feywild. While somewhat vulnerable, they are unmatched in their mastery of magic.', -2, 10, 0, 4);
+INSERT INTO race (name, description, modAC, modHP, modAttack, modSpell) VALUES ('Undead', 'Ceaseless in their hunger for life, undead are hard to bring down. They are not as skilled in battle as their warm-blooded counterparts.', -1, 20, 1, 1);
 
 CREATE TABLE class (
 
@@ -35,17 +36,16 @@ modAC int,
 modHP int,
 modAttack int,
 modSpell int,
-spellSlots int,
-weaponType varchar(32)
+spellSlots int
 
 );
 
-INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots, weaponType) VALUES ('Rogue', 0, -5, 4, 1, 2, 'Dagger');
-INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots, weaponType) VALUES ('Paladin', 2, 0, 1, 2, 4, 'Mace');
-INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots, weaponType) VALUES ('Wizard', -1, 0, -2, 5, 8, 'Staff');
-INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots, weaponType) VALUES ('Ranger', 1, 5, 3, 1, 2, 'Bow');
-INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots, weaponType) VALUES ('Necromancer', -2, 10, 1, 4, 6, 'Wand');
-INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots, weaponType) VALUES ('Warrior', 2, 0, 4, -2, 2, 'Greataxe');
+INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots) VALUES ('Rogue', 0, -5, 4, 1, 2);
+INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots) VALUES ('Paladin', 2, 0, 1, 2, 4);
+INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots) VALUES ('Wizard', -1, 0, -2, 5, 8);
+INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots) VALUES ('Ranger', 1, 5, 3, 1, 2);
+INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots) VALUES ('Necromancer', -2, 10, 1, 4, 6);
+INSERT INTO class (name, modAC, modHP, modAttack, modSpell, spellSlots) VALUES ('Warrior', 2, 0, 4, -2, 2);
 
 
 CREATE TABLE spell (
