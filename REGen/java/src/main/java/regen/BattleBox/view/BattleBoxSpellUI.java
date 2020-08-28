@@ -50,51 +50,41 @@ public class BattleBoxSpellUI {
 					"      (_/      \\_)  ");
 		}
 		else if (spell.getSpellID() == 5) {
-			System.out.println("\n" + 
-					"  ▄▀▀█▀▀▄\n" + 
-					" ▐▌─────▐▌  ~ * ~ * ~ * ~\n" + 
-					" ▐█▄───▄█▌  HEALING AURA \n" + 
-					"  ▀██▄██▀   ~ * ~ * ~ * ~\n" + 
-					"");
+			System.out.println("");
 		}
 		else if (spell.getSpellID() == 6) {
-			System.out.println("      ▄▄▄▄░\n" + 
-					"RAWR ▀▀▄██►\n" + 
-					"     ▀▀███►\n" + 
-					"      ▀███► █►\n" + 
-					"      ▄████▀▀\n" + 
-					"");
+			System.out.println("");
 		}
 		else if (spell.getSpellID() == 7) {
-			System.out.println("(∩｀-´)⊃━━☆ﾟ.*･｡ﾟ");
+			System.out.println("");
 		}
 		else if (spell.getSpellID() == 8) {
-			System.out.println("⊹╰(⌣ʟ⌣)╯⊹");
+			System.out.println("");
 		}
 		else if (spell.getSpellID() == 9) {
-			System.out.println("(ﾉ☉ヮ⚆)ﾉ ⌒*:･ﾟ✧");
+			System.out.println("");
 		}
 		else if (spell.getSpellID() == 10) {
-			System.out.println("(ノ ゜Д゜)ノ ︵ ┻━┻");
+			System.out.println("");
 		}
 		else if (spell.getSpellID() == 11) {
-			System.out.println("o()xxxx[{:::::::::::::>.*･｡ﾟ");
+			System.out.println("o()xxxx[{:::::::::::::>");
 		}
 		else if (spell.getSpellID() == 12) {
 			System.out.print("\n");
 			System.out.println("An EXPLOSION of arcane energy hits each mob!");
 			System.out.print("\n");
-			System.out.println("ヽ(｀Д´)⊃━☆ﾟ. * ･ ｡ﾟ,  (-(-_-(-_(-_(-_-)_-)-_-)_-)_-)-)");
+			System.out.println("@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&  (-(-_-(-_(-_(-_-)_-)-_-)_-)_-)-)");
 			System.out.print("\n");
 		}
 		else if (spell.getSpellID() == 13) {
 			System.out.print("\n");
 			System.out.print("\n");
-			System.out.println("╰( ͡° ͜ʖ ͡° )つ──☆*:・ﾟ  (-(-_-(-_(-_(-_-)_-)-_-)_-)_-)-)");
+			System.out.println("@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&  (-(-_-(-_(-_(-_-)_-)-_-)_-)_-)-)");
 			System.out.print("\n");
 		}
 		else if (spell.getSpellID() == 14) {
-			System.out.println("ᕦ(ò_óˇ)ᕤ  ᕦ(ò_óˇ)ᕤ  ᕦ(ò_óˇ)ᕤ");
+			System.out.println("@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&");
 			System.out.println("Do you even rage, bro?");
 			System.out.print("\n");
 		}
@@ -105,14 +95,14 @@ public class BattleBoxSpellUI {
 		printSpellHitAnimation(spell);
 		System.out.print("\n");
 		if (isCrit == true) {
-			System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+			System.out.println("@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&");
 			System.out.println("   ___ ___ ___ _____ ___ ___   _   _      _  _ ___ _____ \n" + 
 							   "  / __| _ \\_ _|_   _|_ _/ __| /_\\ | |    | || |_ _|_   _|\n" + 
 							   " | (__|   /| |  | |  | | (__ / _ \\| |__  | __ || |  | |  \n" + 
 							   "  \\___|_|_\\___| |_| |___\\___/_/ \\_\\____| |_||_|___| |_|  \n" + 
 							   "                                                         ");
 		}
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+		System.out.println("@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&");
 		System.out.print("\n");
 		System.out.println("You hit " + mob.getName() + " for " + damage + " damage!");
 		System.out.println("HP remaining: " + mob.getHP());

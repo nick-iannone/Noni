@@ -89,7 +89,7 @@ public class BattleBoxUI {
 	
 	public void printAttackHit(Mob target) {
 		
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+		System.out.println("\n");
 		System.out.println("GOT 'EM!");
 		System.out.println("Your attack hit " + target.getName());
 		System.out.print("\n");
@@ -101,7 +101,7 @@ public class BattleBoxUI {
 	
 	public void printAttackHitMinion(Mob mob, Minion minion) {
 		
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+		System.out.println("\n");
 		System.out.println("GOT 'EM!");
 		System.out.println(minion.getName() + "'s attack hit " + mob.getName());
 		System.out.print("\n");
@@ -113,7 +113,7 @@ public class BattleBoxUI {
 	public void printAttackHitMob(Mob mob, PlayerCharacter player) {
 		
 		System.out.println("@#$%&@#$%&@#$%&@#$%&@#$%&@#$%&@#$%&");
-		System.out.println("(V) (°,,°) (V)   OUCH! 	 (≧︿≦)");
+		System.out.println("OUCH!");
 		System.out.println("-----------------------------------");
 		System.out.println(mob.getName() + " hit " + player.getName() + " with its " + mob.getWeapon().getName() + "!");
 		System.out.print("\n");
@@ -126,7 +126,7 @@ public class BattleBoxUI {
 	public void printAttackHitMobMinion(Mob mob, Minion minion) {
 		
 		System.out.println("@#$%&@#$%&@#$%&@#$%&@#$%&@#$%&@#$%&");
-		System.out.println("(V) (°,,°) (V)   OUCH! 	 (≧︿≦)");
+		System.out.println("~~~~~~~~~~~~~~ OUCH! ~~~~~~~~~~~~~~");
 		System.out.println("-----------------------------------");
 		System.out.println(mob.getName() + " hit " + minion.getName() + " with its " + mob.getWeapon().getName() + "!");
 		System.out.print("\n");
@@ -138,7 +138,7 @@ public class BattleBoxUI {
 	public void printAttackHitMobFriendly(Mob mob, Mob singleTarget) {
 		
 		System.out.println("           FRIENDLY FIRE!          ");
-		System.out.println("     ( •_•)O*¯`·.¸.·´¯`°Q(•_• )    ");
+		System.out.println("\n");
 		System.out.println("@#$%&@#$%&@#$%&@#$%&@#$%&@#$%&@#$%&");
 		System.out.println(mob.getName() + " hit " + singleTarget.getName() + "!");
 		System.out.print("\n");
@@ -150,7 +150,7 @@ public class BattleBoxUI {
 	public void printAttackDamage(Mob target, int damageRoll, boolean crit) {
 		
 		if (crit == true) {
-			System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+			System.out.println("@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&@#$&");
 			System.out.println("   ___ ___ ___ _____ ___ ___   _   _      _  _ ___ _____ \n" + 
 							   "  / __| _ \\_ _|_   _|_ _/ __| /_\\ | |    | || |_ _|_   _|\n" + 
 							   " | (__|   /| |  | |  | | (__ / _ \\| |__  | __ || |  | |  \n" + 
@@ -158,8 +158,8 @@ public class BattleBoxUI {
 							   "                                                         ");
 			sound.play("SpellHitHard2");
 		}
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
-		System.out.println("ᕕ(╭ರ╭ ͟ʖ╮•́)⊃o()xxxx[{::::::::> *CLANG*");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("()xxxx[{::::::::> *CLANG*");
 		System.out.println("OH, THAT'S GOTTA HURT!");
 		System.out.print("\n");
 		System.out.println("You hit " + target.getName() + " for " + damageRoll + " damage!");
@@ -170,7 +170,7 @@ public class BattleBoxUI {
 	public void printAttackDamageMinion(Minion minion, Mob mob, int damageRoll, boolean crit) {
 		
 		if (crit == true) {
-			System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+			System.out.println("~@#%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@$%~@");
 			System.out.println("   ___ ___ ___ _____ ___ ___   _   _      _  _ ___ _____ \n" + 
 							   "  / __| _ \\_ _|_   _|_ _/ __| /_\\ | |    | || |_ _|_   _|\n" + 
 							   " | (__|   /| |  | |  | | (__ / _ \\| |__  | __ || |  | |  \n" + 
@@ -178,8 +178,8 @@ public class BattleBoxUI {
 							   "                                                         ");
 			sound.play("SpellHitHard2");
 		}
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
-		System.out.println("┌(◉ ͜ʖ◉)つ┣▇▇▇═── *CLANG*");
+		System.out.println("\n");
+		System.out.println("*CLANG*");
 		System.out.println("OH, THAT'S GOTTA HURT!");
 		System.out.print("\n");
 		System.out.println(minion.getName() + " hit " + mob.getName() + " for " + damageRoll + " damage!");
@@ -191,7 +191,7 @@ public class BattleBoxUI {
 		
 		if (mob.isTurned() == true) {
 			if (isCrit == true) {
-				System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+				System.out.println("\n");
 				System.out.println("   ___ ___ ___ _____ ___ ___   _   _      _  _ ___ _____ \n" + 
 								   "  / __| _ \\_ _|_   _|_ _/ __| /_\\ | |    | || |_ _|_   _|\n" + 
 								   " | (__|   /| |  | |  | | (__ / _ \\| |__  | __ || |  | |  \n" + 
@@ -199,8 +199,8 @@ public class BattleBoxUI {
 								   "                                                         ");
 				sound.play("SpellHitHard2");
 			}
-			System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
-			System.out.println("༼ つ ◕_◕ ༽つ()xxxx[{::::::::> 	༼ ༎ຶ ෴ ༎ຶ༽");
+			System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
+			System.out.println("()xxxx[{::::::::>");
 			System.out.println("WHAT ARE FRIENDS FOR?");
 			System.out.print("\n");
 			System.out.println(mob.getName() + " hit " + singleTarget.getName() + " for " + damage + " damage!");
@@ -209,7 +209,7 @@ public class BattleBoxUI {
 		}
 		else {
 			if (isCrit == true) {
-				System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+				System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
 				System.out.println("   ___ ___ ___ _____ ___ ___   _   _      _  _ ___ _____ \n" + 
 								   "  / __| _ \\_ _|_   _|_ _/ __| /_\\ | |    | || |_ _|_   _|\n" + 
 								   " | (__|   /| |  | |  | | (__ / _ \\| |__  | __ || |  | |  \n" + 
@@ -217,8 +217,8 @@ public class BattleBoxUI {
 								   "                                                         ");
 				sound.play("SpellHitHard2");
 			}
-			System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
-			System.out.println("༼ つ ◕_◕ ༽つ()xxxx[{::::::::> (ᕗ ͠° ਊ ͠° )ᕗ");
+			System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
+			System.out.println("()xxxx[{::::::::>");
 			System.out.println("THAT HURT, CHARLIE!");
 			System.out.print("\n");
 			System.out.println(mob.getName() + " hit " + player.getName() + " for " + damage + " damage!");
@@ -229,7 +229,7 @@ public class BattleBoxUI {
 	
 	public void printAttackDamageMobMinion(Mob mob, Minion minion, int damage, boolean isCrit) {
 		if (isCrit == true) {
-			System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+			System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
 			System.out.println("   ___ ___ ___ _____ ___ ___   _   _      _  _ ___ _____ \n" + 
 							   "  / __| _ \\_ _|_   _|_ _/ __| /_\\ | |    | || |_ _|_   _|\n" + 
 							   " | (__|   /| |  | |  | | (__ / _ \\| |__  | __ || |  | |  \n" + 
@@ -237,8 +237,8 @@ public class BattleBoxUI {
 							   "                                                         ");
 			sound.play("SpellHitHard2");
 		}
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
-		System.out.println("༼ つ ◕_◕ ༽つ()xxxx[{::::::::> (ᕗ ͠° ਊ ͠° )ᕗ");
+		System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
+		System.out.println("()xxxx[{::::::::>");
 		System.out.println("THAT HURT, CHARLIE!");
 		System.out.print("\n");
 		System.out.println(mob.getName() + " hit " + minion.getName() + " for " + damage + " damage!");
@@ -249,7 +249,7 @@ public class BattleBoxUI {
 	public void printMiss() {
 		
 		System.out.println("---------------------------------------------------------------");
-		System.out.println("¯\\(°_o)/¯");
+		System.out.println("�\\(�_o)/�");
 		System.out.println("That... is a miss!");
 		System.out.print("\n");
 	}
@@ -262,7 +262,7 @@ public class BattleBoxUI {
 	public void printSpellHit(Mob mob, Spell spell) {
 		
 		spellUI.printSpellHitAnimation(spell);
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+		System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
 		System.out.println("GOT 'EM!");
 		System.out.println("Your spell hit " + mob.getName());
 		System.out.print("\n");
@@ -274,7 +274,7 @@ public class BattleBoxUI {
 	public void printSpellHitMob(Mob mob, Spell spell) {
 		
 		spellUI.printSpellHitAnimation(spell);
-		System.out.println(".*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.*･｡ﾟ.");
+		System.out.println("@#$%@#$%@#$%@#$%@#$%@#$%@#$%@#%$@#%$@#%$@#%$@#$@#%@$#%@$#%@$#%@$#%@$#%@$#");
 		System.out.println("GOTCHA!");
 		System.out.println(mob.getName() + " hit you with " + spell.getName());
 		System.out.print("\n");
@@ -390,10 +390,7 @@ public class BattleBoxUI {
 				"                                                                          ");
 		System.out.print("\n");
 		System.out.println("CONGRATULATIONS! You are VICTORIOUS!");
-		System.out.println("ᕕ(⌐■_■)ᕗ ♪♬");
-		System.out.println("ᕕ(⌐■_■)ᕗ ♪♬");
-		System.out.println("ᕕ(⌐■_■)ᕗ ♪♬");
-		System.out.println("ᕕ(⌐■_■)ᕗ ♪♬");
+		System.out.print("\n");
 		System.out.println("YOU ROCK!");
 		System.out.print("\n");
 		System.out.println(":::::::::::::::::::::::::");
@@ -412,10 +409,7 @@ public class BattleBoxUI {
 				"(______/ (_______/|/       (_______/|/     \\|   )_(   (_)\n" + 
 				"                                                         ");
 		System.out.println("OUR HERO HAS BEEN DEFEATED!");
-		System.out.println("x⸑x");
-		System.out.println("x⸑x");
-		System.out.println("x⸑x");
-		System.out.println("x⸑x");
+		System.out.print("\n");
 		System.out.println("BETTER LUCK NEXT TIME!");
 		System.out.print("\n");
 		System.out.println(":::::::::::::::::::::::::");

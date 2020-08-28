@@ -1,9 +1,6 @@
 package regen.view;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -25,18 +22,20 @@ public class SoundEffect {
 			clip = AudioSystem.getClip();
 			clip.open(sound);
 		} catch (Exception e) {
-				
+			System.out.println("ERROR LOCATING FILE");
+			e.printStackTrace();	
 		}
 	}
 	
 	public void play(String fileName) {
 		
 		try {
-			String filePath = "/Users/niannone/Development/Repo/REGen/java/REGen Sounds/" + fileName + ".wav";
+			String filePath = "src\\REGen Sounds\\" + fileName + ".wav";
 			setFile(filePath);
 			clip.start();
 		} catch (Exception e) {
-			
+			System.out.println("ERROR PLAYING AUDIO");
+			e.printStackTrace();
 		}
 	}
 }
