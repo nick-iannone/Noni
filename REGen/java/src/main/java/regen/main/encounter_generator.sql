@@ -1,12 +1,12 @@
-drop table race;
-drop table class;
-drop table class_spell;
-drop table spell;
-drop table weapon;
-drop table character;
-drop table location;
-drop table encounter;
-drop table mob;
+drop table if exists race;
+drop table if exists class;
+drop table if exists class_spell;
+drop table if exists spell;
+drop table if exists weapon;
+drop table if exists character;
+drop table if exists location;
+drop table if exists encounter;
+drop table if exists mob;
 
 CREATE TABLE race (
 
