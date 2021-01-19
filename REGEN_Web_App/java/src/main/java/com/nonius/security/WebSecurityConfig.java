@@ -1,7 +1,7 @@
-package com.techelevator.security;
+package com.nonius.security;
 
-import com.techelevator.security.jwt.JWTConfigurer;
-import com.techelevator.security.jwt.TokenProvider;
+import com.nonius.security.jwt.JWTConfigurer;
+import com.nonius.security.jwt.TokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

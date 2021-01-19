@@ -1,4 +1,4 @@
-package com.techelevator.controller;
+package com.nonius.controller;
 
 import java.util.List;
 
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.techelevator.dao.SQLRegenDAO;
-import com.techelevator.model.CharacterClass;
-import com.techelevator.model.PlayerCharacter;
-import com.techelevator.model.Race;
-import com.techelevator.model.Spell;
-import com.techelevator.model.Weapon;
+import com.nonius.dao.SQLRegenDAO;
+import com.nonius.model.CharacterClass;
+import com.nonius.model.PlayerCharacter;
+import com.nonius.model.Race;
+import com.nonius.model.Spell;
+import com.nonius.model.Weapon;
 
 @CrossOrigin
 @RestController

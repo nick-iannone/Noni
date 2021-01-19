@@ -1,4 +1,4 @@
-package com.techelevator.model;
+package com.nonius.model;
 
 public class Race {
 	

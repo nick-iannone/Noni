@@ -1,14 +1,14 @@
-package com.techelevator.dao;
+package com.nonius.dao;
 
 import java.util.List;
 
-import com.techelevator.model.CharacterClass;
-import com.techelevator.model.Mob;
-import com.techelevator.model.PlayerCharacter;
-import com.techelevator.model.Race;
-import com.techelevator.model.Setting;
-import com.techelevator.model.Spell;
-import com.techelevator.model.Weapon;
+import com.nonius.model.CharacterClass;
+import com.nonius.model.Mob;
+import com.nonius.model.PlayerCharacter;
+import com.nonius.model.Race;
+import com.nonius.model.Setting;
+import com.nonius.model.Spell;
+import com.nonius.model.Weapon;
 
 public interface RegenDAO {
 	

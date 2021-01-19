@@ -1,4 +1,4 @@
-package com.techelevator.dao;
+package com.nonius.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,13 +9,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
-import com.techelevator.model.CharacterClass;
-import com.techelevator.model.Mob;
-import com.techelevator.model.PlayerCharacter;
-import com.techelevator.model.Race;
-import com.techelevator.model.Setting;
-import com.techelevator.model.Spell;
-import com.techelevator.model.Weapon;
+import com.nonius.model.CharacterClass;
+import com.nonius.model.Mob;
+import com.nonius.model.PlayerCharacter;
+import com.nonius.model.Race;
+import com.nonius.model.Setting;
+import com.nonius.model.Spell;
+import com.nonius.model.Weapon;
 
 
 @Component

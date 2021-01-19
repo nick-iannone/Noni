@@ -1,6 +1,6 @@
-package com.techelevator.dao;
+package com.nonius.dao;
 
-import com.techelevator.model.User;
+import com.nonius.model.User;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

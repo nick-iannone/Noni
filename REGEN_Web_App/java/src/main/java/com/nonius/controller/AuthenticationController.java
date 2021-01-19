@@ -1,4 +1,4 @@
-package com.techelevator.controller;
+package com.nonius.controller;
 
 import javax.validation.Valid;
 
@@ -13,13 +13,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.techelevator.dao.UserDAO;
-import com.techelevator.model.LoginDTO;
-import com.techelevator.model.RegisterUserDTO;
-import com.techelevator.model.User;
-import com.techelevator.model.UserAlreadyExistsException;
-import com.techelevator.security.jwt.JWTFilter;
-import com.techelevator.security.jwt.TokenProvider;
+import com.nonius.dao.UserDAO;
+import com.nonius.model.LoginDTO;
+import com.nonius.model.RegisterUserDTO;
+import com.nonius.model.User;
+import com.nonius.model.UserAlreadyExistsException;
+import com.nonius.security.jwt.JWTFilter;
+import com.nonius.security.jwt.TokenProvider;
 
 @RestController
 @CrossOrigin

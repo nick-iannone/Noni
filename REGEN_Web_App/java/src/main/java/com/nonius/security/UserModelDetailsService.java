@@ -1,8 +1,8 @@
-package com.techelevator.security;
+package com.nonius.security;
 
 
-import com.techelevator.dao.UserDAO;
-import com.techelevator.model.User;
+import com.nonius.dao.UserDAO;
+import com.nonius.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;

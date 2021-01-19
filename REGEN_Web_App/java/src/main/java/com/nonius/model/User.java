@@ -1,4 +1,4 @@
-package com.techelevator.model;
+package com.nonius.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

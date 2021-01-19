@@ -1,4 +1,4 @@
-package com.techelevator.model;
+package com.nonius.model;
 
 /**
  * DTO for storing a user's credentials.
