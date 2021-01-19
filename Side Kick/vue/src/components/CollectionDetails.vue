@@ -2,7 +2,7 @@
   <div class="collection_details">
       <h1>{{this.collection.name}}</h1>
       <div class='settings'>
-          <modal-form v-bind:collection = "collection"/>
+          <modal-form :collection = "collection"/>
       </div>
       <h2 class="username">{{this.collection.username}}'s {{this.collection.visibility}} Collection</h2>
       <div class="grid-container">

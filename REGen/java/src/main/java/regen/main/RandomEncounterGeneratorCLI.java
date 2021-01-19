@@ -1,7 +1,13 @@
 package regen.main;
 
 import javax.sql.DataSource;
-import java.time.format.DateTimeFormatter;  
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.time.LocalDateTime;  
 import org.apache.commons.dbcp2.BasicDataSource;
 
@@ -29,6 +35,7 @@ public class RandomEncounterGeneratorCLI {
 		dataSource.setPassword("postgres1");
 
 		RandomEncounterGeneratorCLI application = new RandomEncounterGeneratorCLI(dataSource);
+		
 		application.run();
 	}
 	
@@ -42,8 +49,43 @@ public class RandomEncounterGeneratorCLI {
 	}
 	
  
+	public int getMinDeletions(String s) {
+	    
+	    String checkString = "";
+	    Map<String, Integer> checked = new HashMap<String, Integer>();
+	    Set<String> keys = new HashSet<String>();
+	    
+	    for (int i = 0; i < s.length(); i++) {
+	    	
+	    	int deletionCount = 0;
+	    	int charCount = 0;
+	        checkString = s.substring(i, i+1);
+	        keys.add(checkString);
+	        
+	        for (int n = 0; n < s.length(); n++) {
+	            if (checkString.equals(s.substring(n, n+1))) {
+	                charCount++;
+	                if (charCount > 1) {
+	                	deletionCount++;
+	                }
+	            }
+	        }
+	        checked.put(checkString, deletionCount);
+	    }
+	    
+	    int totalDeletions = 0;
+	    
+	    for (String k : keys) {
+	    	totalDeletions += checked.get(k);
+	    }
+	    
+	    return totalDeletions;
+	}
+
+
 	public void run() {
-		
+
+		System.out.println(getMinDeletions("kkkkkllooooiiiddbb"));
 		
 		while(branchIndex == 0) {
 		
