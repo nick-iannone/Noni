@@ -57,7 +57,7 @@
       </div>
 
       <div class="arena-header">
-        <exit-modal />
+        <exit-modal v-on:exitGame="runAway" />
       </div>
 
       <div class="my-area">
@@ -231,6 +231,26 @@
         </draggable>
       </div>
     </div>
+    <modal
+      name="victory-modal"
+      v-if="show"
+      height="355px"
+      width="485px"
+      :clickToClose="false"
+      styles="background-color: rgb(0, 0, 0, 0.6); border-radius: 10px; border: 2px solid black;"
+    >
+      <div class='vic-modal-content'>
+        <div class="vic-modal-header">
+          VICTORY!
+        </div>
+        <p class="vic-modal-prompt">
+          The enemy keep is yours!
+        </p>
+        <button class="modal-btn-quit" @click="exitGame">
+          EXIT GAME
+        </button>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -252,6 +272,7 @@ export default {
         myGame: {
           username: this.$store.state.user.username,
           readyForBattle: true,
+          concede: false,
           keepHand: false,
           keepContracts: false,
           turnBegin: false,
@@ -579,6 +600,24 @@ export default {
         JSON.stringify(this.game.myGame)
       );
     },
+    show() {
+      this.$modal.show("victory-modal");
+    },
+    hide() {
+      this.$modal.hide("victory-modal");
+    },
+    runAway() {
+      this.game.myGame.concede = true;
+      this.sendGameState();
+      this.exitGame();
+    },
+    exitGame() {
+      this.$store.commit("SET_OPPONENT", "");
+      this.$store.commit("SET_MYGAME_RFB", false);
+      this.$store.commit("SET_OPPGAME_RFB", false);
+      this.$router.push({ name: "home" });
+    },
+
   },
   created() {
     CardService.getAllCards().then((response) => {
@@ -608,6 +647,10 @@ export default {
         }
         if (this.game.oppGame.target != {}) {
           this.resolveDamagedCard();
+        }
+        if (message.concede === true) {
+          this.showVictory = true;
+          this.show();
         }
       }
     );
@@ -947,5 +990,26 @@ export default {
 .targeted:hover {
   box-shadow: 0 0 5px 5px rgb(43, 100, 255), 0 0 5px 5px rgb(255, 255, 255),
     0 0 5px 5px rgb(43, 100, 255);
+}
+.vic-modal-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vic-modal-header{
+  font-family: 'Germania One';
+  font-size: 90px;
+  color: white;
+  text-shadow: 2px 2px rgb(88, 88, 88);
+}
+.vic-modal-prompt {
+    color: white;
+    font-family: 'Marcellus';
+    font-size: 25px;
+    margin-top: 20px;
+    font-style: italic;
 }
 </style>

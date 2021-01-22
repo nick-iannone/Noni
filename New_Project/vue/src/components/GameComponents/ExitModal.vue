@@ -40,10 +40,7 @@ export default {
       this.$modal.hide("exit-modal");
     },
     exitGame() {
-      this.$store.commit("SET_OPPONENT", "");
-      this.$store.commit("SET_MYGAME_RFB", false);
-      this.$store.commit("SET_OPPGAME_RFB", false);
-      this.$router.push({ name: "home" });
+      this.$emit('exitGame');
     },
   },
   mount() {

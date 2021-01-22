@@ -83,7 +83,7 @@ public class CardSqlDAO implements CardDAO {
 		contract.setCost(results.getString("cost"));
 		contract.setDesc(results.getString("text"));
 		contract.setDura(results.getInt("duration"));
-		contract.setCounters(results.getInt("counters"));
+		contract.setAge(results.getInt("age"));
 		contract.setActive(results.getBoolean("is_active"));
 		
 		return contract;

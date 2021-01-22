@@ -126,22 +126,22 @@ CREATE TABLE contracts (
 	cost varchar(4) NOT NULL,
 	text varchar(300) NOT NULL,
 	duration int,
-	counters int,
+	age int DEFAULT 0,
 	is_active boolean,
 	CONSTRAINT PK_contracts PRIMARY KEY (id)
 );
 
-INSERT INTO contracts (name, cost, text, duration, counters, is_active) 
+INSERT INTO contracts (name, cost, text, duration, age, is_active) 
 VALUES ('Plot: Bounty', '20', 'At the beginning of your turn, if this contract is active, put a hunt counter on this card. When there are 2 or more hunt counters on this card, destroy an enemy troop.', 2, 0, false);
-INSERT INTO contracts (name, cost, text, duration, counters, is_active) 
+INSERT INTO contracts (name, cost, text, duration, age, is_active) 
 VALUES ('Requisition: Enlist the Masses', '10', 'At the beginning of your turn, if this contract is active, put a Loyal Peasant into the combat zone.', 3, 0, false);
-INSERT INTO contracts (name, cost, text, duration, counters, is_active) 
+INSERT INTO contracts (name, cost, text, duration, age, is_active) 
 VALUES ('Plot: Misinformation Campaign', '25', E'At the beginning of your turn, reduce your opponent\'s Reputation by 5.', 2, 0, false);
-INSERT INTO contracts (name, cost, text, duration, counters, is_active)
+INSERT INTO contracts (name, cost, text, duration, age, is_active)
 VALUES ('Requisition: Repair Services', '20', 'At the beginning of your turn, restore 5 integrity points to your Fortress.', 3, 0, false);
-INSERT INTO contracts (name, cost, text, duration, counters, is_active) 
+INSERT INTO contracts (name, cost, text, duration, age, is_active) 
 VALUES ('Tactic: Morale Boost', '20', 'At the beginning of your turn, put a morale counter on this card. Your troops gain +1 to all attributes for each morale counter on this card.', 2, 0, false);
-INSERT INTO contracts (name, cost, text, duration, counters, is_active) 
+INSERT INTO contracts (name, cost, text, duration, age, is_active) 
 VALUES ('Loan: Short-Term Loan', '10', 'At the beginning of your turn put an interest counter on this card, then you gain 5 coins for each interest counter.', 2, 0, false);
 
 CREATE TABLE decks_contracts (
@@ -192,6 +192,8 @@ INSERT INTO cards (name, cost, image, abilities, attack, resilience, loyalty)
 VALUES ('Thunderous Cavalry', '15', 'cavalry.jpg','This troop can only attack if there are enemy troops in the opposing combat zone.', 7, 3, 6);
 INSERT INTO cards (name, cost, image, abilities, attack, resilience, loyalty)
 VALUES ('Veteran Healer', '20', 'healer.jpg', 'While this troop is in the combat zone, if another allied troop would take damage, reduce the damage by 2.', 0, 3, 6);
+INSERT INTO cards (name, cost, image, abilities, attack, resilience, loyalty)
+VALUES ('Disguised Saboteur', '30', 'saboteur.jpg', 'This card appears to your opponent as an Apprentice Mercenary. When your opponent attacks this troop, reveal its true identity and destroy an enemy troop.', 6, 2, 2);
 
 CREATE TABLE decks_cards (
         deck_id int,

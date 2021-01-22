@@ -7,10 +7,16 @@ public class Contract {
 	private String cost;
 	private String desc;
 	private int dura;
-	private int counters;
+	private int age;
 	private boolean isActive;
 	
 	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public int getId() {
 		return id;
 	}
@@ -40,12 +46,6 @@ public class Contract {
 	}
 	public void setDura(int dura) {
 		this.dura = dura;
-	}
-	public int getCounters() {
-		return counters;
-	}
-	public void setCounters(int counters) {
-		this.counters = counters;
 	}
 	public boolean isActive() {
 		return isActive;

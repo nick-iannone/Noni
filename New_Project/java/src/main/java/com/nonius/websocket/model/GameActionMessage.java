@@ -8,6 +8,7 @@ import com.nonius.game.model.GameState;
 public class GameActionMessage {
 	private String username;
 	private Boolean readyForBattle;
+	private Boolean concede;
 	private Boolean keepHand;
 	private Boolean keepContracts;
 	private Boolean turnBegin;
@@ -20,6 +21,12 @@ public class GameActionMessage {
 	private GameState gameState;
 	
 	
+	public Boolean getConcede() {
+		return concede;
+	}
+	public void setConcede(Boolean concede) {
+		this.concede = concede;
+	}
 	public List<Card> getHasAttacked() {
 		return hasAttacked;
 	}
